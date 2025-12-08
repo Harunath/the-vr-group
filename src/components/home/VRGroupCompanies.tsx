@@ -26,7 +26,7 @@ const COMPANIES: Company[] = [
 			"We work with founders, SMEs and growing brands to take ideas from concept to production with a clear focus on performance, UX and long-term maintainability.",
 		],
 		cta: "Visit VR Tech Forz",
-		href: "/vr-tech-forz",
+		href: "https://www.vrtechforz.com/",
 		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1765001697/VR_TEch_Forz_Final_Logo_lceoqy.png",
 		accent: "#0ea5e9", // tech blue
 	},
@@ -41,7 +41,7 @@ const COMPANIES: Company[] = [
 			"Our vision is to build self-sustainable, future-ready villages across India.",
 		],
 		cta: "Explore VR Kisan Parivaar",
-		href: "/vr-kisan-parivaar",
+		href: "https://www.vrkisanparivaar.com/",
 		logo: "https://res.cloudinary.com/diaoy3wzi/image/upload/v1764315365/vrKP-4_no_bg_2_ccexer.png",
 		accent: "#16a34a", // rural green
 	},
@@ -55,7 +55,7 @@ const COMPANIES: Company[] = [
 			"From daily essentials to curated local produce, we focus on freshness, fair pricing and trusted sourcing, powered by tech and strong supply chains.",
 		],
 		cta: "Shop with VR 1 Mart",
-		href: "/vr-1-mart",
+		href: "https://www.vr1mart.com/",
 		logo: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764740121/vr1mart-logo-final_mfwrro.png",
 		accent: "#f97316", // retail orange
 	},
@@ -69,7 +69,7 @@ const COMPANIES: Company[] = [
 			"We bridge the gap between natural farming practices, modern techniques and market access, helping farmers grow better and earn better.",
 		],
 		cta: "Discover VR Agri",
-		href: "/vr-agri",
+		href: "https://www.vragrifarms.com/",
 		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1765006087/VR_FARMS_1_hp4nlo.png",
 		accent: "#15803d", // deep agri green
 	},

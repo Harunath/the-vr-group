@@ -1,6 +1,6 @@
 "use client";
 
-const ACCENT = "#059669"; // VR green
+const ACCENT = "#059669"; // VR green (kept for future use)
 
 export default function About() {
 	return (
@@ -9,12 +9,13 @@ export default function About() {
 			className="
 				relative border-t border-slate-200/70 bg-white
 				pt-28 pb-20 sm:pt-32 sm:pb-24
-				[radial-gradient(circle_at_top_left,#ecfdf3_0,transparent_65%),radial-gradient(circle_at_bottom_right,#e0f2fe_0,transparent_65%)]
+				overflow-hidden
+				bg-[radial-gradient(circle_at_top_left,#ecfdf3_0,transparent_65%),radial-gradient(circle_at_bottom_right,#e0f2fe_0,transparent_65%)]
 			">
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="grid gap-16 lg:grid-cols-[1.4fr_1fr] lg:items-center">
 					{/* ---------------- LEFT SIDE ---------------- */}
-					<div className="max-w-2xl">
+					<div className="max-w-2xl mx-auto text-center lg:mx-0 lg:text-left">
 						<p className="text-xs font-semibold uppercase tracking-[0.32em] text-emerald-700">
 							About The VR Group
 						</p>
@@ -47,9 +48,16 @@ export default function About() {
 					</div>
 
 					{/* ---------------- RIGHT: PREMIUM STATS CARD ---------------- */}
-					<div className="relative">
-						{/* Soft glowing background shape */}
-						<div className="pointer-events-none absolute -inset-10 -z-10 rounded-[2.5rem] bg-linear-to-tr from-emerald-100/70 via-white to-sky-100/70 blur-2xl" />
+					<div className="relative max-w-md mx-auto lg:max-w-none lg:mx-0">
+						{/* Soft glowing background shape, clamped inside card */}
+						<div
+							className="
+								pointer-events-none absolute inset-0 -z-10
+								rounded-[2.5rem] bg-linear-to-tr
+								from-emerald-100/70 via-white to-sky-100/70
+								blur-2xl
+							"
+						/>
 
 						<div
 							className="
@@ -94,7 +102,7 @@ export default function About() {
 							</div>
 
 							{/* bottom accent line */}
-							<div className="mt-7 h-[3px] w-full bg-linear-to-r from-emerald-500 via-teal-500 to-sky-500 rounded-full" />
+							<div className="mt-7 h-[3px] w-full rounded-full bg-linear-to-r from-emerald-500 via-teal-500 to-sky-500" />
 						</div>
 					</div>
 				</div>
@@ -117,7 +125,6 @@ function Stat({ label, value, description }: StatProps) {
 				p-4 text-center sm:text-left
 				shadow-sm hover:shadow-md transition
 			">
-			{/* Icon placeholder (can replace with SVG if needed) */}
 			<div className="mb-2 flex items-center justify-center sm:justify-start">
 				<div className="h-3 w-3 rounded-full bg-emerald-500" />
 			</div>

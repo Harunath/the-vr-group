@@ -26,12 +26,11 @@ const listVariants = {
 	visible: {
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.12, // animate children one by one
+			staggerChildren: 0.12,
 		},
 	},
 };
 
-// Card variants
 const cardVariants = {
 	hidden: { opacity: 0, y: 18 },
 	visible: {
@@ -47,13 +46,14 @@ export default function Partners() {
 			id="partner"
 			className="
 				relative border-t border-slate-200/70 bg-white
-				[radial-gradient(circle_at_top_left,#ecfdf3_0,transparent_60%),radial-gradient(circle_at_bottom_right,#e0f2fe_0,transparent_60%)]
+				overflow-hidden
+				bg-[radial-gradient(circle_at_top_left,#ecfdf3_0,transparent_60%),radial-gradient(circle_at_bottom_right,#e0f2fe_0,transparent_60%)]
 			">
-			<div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-18 lg:py-20">
+			<div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
 				<div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)] lg:items-start">
 					{/* LEFT: TITLE + SHORT PITCH */}
 					<motion.div
-						className="max-w-xl"
+						className="max-w-xl mx-auto text-center lg:mx-0 lg:text-left"
 						initial={{ opacity: 0, y: 18 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true, amount: 0.35 }}
@@ -73,7 +73,6 @@ export default function Partners() {
 							pilot.
 						</p>
 
-						{/* small trust chip */}
 						<div className="mt-6 inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50/80 px-3 py-1">
 							<span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
 							<span className="text-[0.75rem] font-medium text-emerald-800">
@@ -125,10 +124,9 @@ function WhyCard({ title, desc, index }: WhyCardProps) {
 			className="
 				group relative flex gap-4 rounded-2xl border border-slate-200/80 bg-white/90
 				p-4 shadow-[0_10px_26px_rgba(15,23,42,0.06)] backdrop-blur
-			 transition-shadow
-				duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.09)]
+				overflow-hidden
+				transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.09)]
 			">
-			{/* Number badge */}
 			<div className="relative z-10 flex shrink-0 items-start">
 				<div
 					className="
@@ -145,14 +143,13 @@ function WhyCard({ title, desc, index }: WhyCardProps) {
 				<h3 className="text-sm font-semibold text-slate-900">{title}</h3>
 				<p className="mt-1 text-sm leading-relaxed text-slate-600">{desc}</p>
 
-				{/* subtle micro-label */}
 				<p className="mt-2 text-[0.7rem] font-medium uppercase tracking-[0.16em] text-slate-400">
 					Key partner advantage
 				</p>
 			</div>
 
-			{/* soft corner glow */}
-			<div className="pointer-events-none absolute -right-6 -bottom-6 h-16 w-16 rounded-full bg-linear-to-tr from-emerald-100 via-white to-transparent blur-xl transition-opacity duration-300 group-hover:opacity-100" />
+			{/* soft corner glow, clipped inside card */}
+			<div className="pointer-events-none absolute -right-6 -bottom-6 h-16 w-16 rounded-full bg-linear-to-tr from-emerald-100 via-white to-transparent blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 		</motion.article>
 	);
 }

@@ -12,14 +12,14 @@ export default function Navbar() {
 
 	return (
 		<header
-		className="
+			className="
+			 max-w-screen
 	fixed inset-x-0 top-0 z-50
 	border-b border-slate-200/80
 	bg-white/95 backdrop-blur-lg
 	bg-[radial-gradient(circle_at_top_left,#ecfdf3_0,transparent_55%),radial-gradient(circle_at_top_right,#e0f2fe_0,transparent_55%)]
-"
->
-			<nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+">
+			<nav className="mx-auto flex max-w-screen items-center justify-between px-4 py-3 sm:px-6">
 				{/* LOGO + TAGLINE */}
 				<Link href="/" className="flex items-center gap-3">
 					<Image
