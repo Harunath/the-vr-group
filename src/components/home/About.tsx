@@ -86,7 +86,7 @@ export default function About() {
 							<div className="mt-6 grid gap-5 sm:grid-cols-3">
 								<Stat
 									label="Business Verticals"
-									value="4+"
+									value="6+"
 									description="Tech, agri, retail & rural empowerment."
 								/>
 								<Stat

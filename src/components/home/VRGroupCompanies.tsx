@@ -17,20 +17,6 @@ type Company = {
 
 const COMPANIES: Company[] = [
 	{
-		slug: "vr-tech-forz",
-		name: "VR Tech Forz",
-		tag: "Technology & Digital Solutions",
-		oneLiner: "Full-stack tech team for modern, scalable digital products.",
-		description: [
-			"VR Tech Forz builds fast, secure and user-friendly digital platforms – from websites and portals to AI-powered solutions and internal tools.",
-			"We work with founders, SMEs and growing brands to take ideas from concept to production with a clear focus on performance, UX and long-term maintainability.",
-		],
-		cta: "Visit VR Tech Forz",
-		href: "https://www.vrtechforz.com/",
-		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1765001697/VR_TEch_Forz_Final_Logo_lceoqy.png",
-		accent: "#0ea5e9", // tech blue
-	},
-	{
 		slug: "vr-kisan-parivaar",
 		name: "VR Kisan Parivaar",
 		tag: "Rural Development & Membership Ecosystem",
@@ -45,6 +31,7 @@ const COMPANIES: Company[] = [
 		logo: "https://res.cloudinary.com/diaoy3wzi/image/upload/v1764315365/vrKP-4_no_bg_2_ccexer.png",
 		accent: "#16a34a", // rural green
 	},
+
 	{
 		slug: "vr-1-mart",
 		name: "VR 1 Mart",
@@ -58,6 +45,34 @@ const COMPANIES: Company[] = [
 		href: "https://www.vr1mart.com/",
 		logo: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1764740121/vr1mart-logo-final_mfwrro.png",
 		accent: "#f97316", // retail orange
+	},
+	{
+		slug: "vr-tech-forz",
+		name: "VR Tech Forz",
+		tag: "Technology & Digital Solutions",
+		oneLiner: "Full-stack tech team for modern, scalable digital products.",
+		description: [
+			"VR Tech Forz builds fast, secure and user-friendly digital platforms – from websites and portals to AI-powered solutions and internal tools.",
+			"We work with founders, SMEs and growing brands to take ideas from concept to production with a clear focus on performance, UX and long-term maintainability.",
+		],
+		cta: "Visit VR Tech Forz",
+		href: "https://www.vrtechforz.com/",
+		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1765001697/VR_TEch_Forz_Final_Logo_lceoqy.png",
+		accent: "#0ea5e9", // tech blue
+	},
+	{
+		slug: "vr-greentek",
+		name: "VR GreenTek",
+		tag: "Electricals & Green Energy Solutions",
+		oneLiner: "Powering sustainable infrastructure with clean energy.",
+		description: [
+			"VR GreenTek delivers reliable electrical and renewable energy solutions for residential, commercial, industrial, and rural projects.",
+			"Our expertise spans solar power systems, electrical installations, and energy-efficient infrastructure—designed for safety, scalability, and long-term value.",
+		],
+		cta: "Discover VR GreenTek",
+		href: "https://www.vrgreentek.com/",
+		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1766638077/VR_GreenTekEnergy_Logo_no_bg_iupgwa.png",
+		accent: "#16A34A",
 	},
 	{
 		slug: "vr-agri",

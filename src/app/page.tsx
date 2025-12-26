@@ -1,8 +1,8 @@
+import Contact from "@/components/home/Contact";
 import About from "../components/home/About";
 import HeroBanner from "../components/home/HeroBanner";
-import PartnerCTA from "../components/home/PartnerCTA";
-import Partners from "../components/home/Partners";
 import VRTechForzCard from "../components/home/VRGroupCompanies";
+import Partners from "@/components/home/Partners";
 
 function page() {
 	return (
@@ -11,7 +11,7 @@ function page() {
 			<About />
 			<VRTechForzCard />
 			<Partners />
-			<PartnerCTA />
+			{/* <Contact /> */}
 		</>
 	);
 }

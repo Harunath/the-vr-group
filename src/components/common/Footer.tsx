@@ -41,8 +41,7 @@ export default function Footer() {
 						<FooterLink href="/#about">About</FooterLink>
 						<FooterLink href="/#companies">Our Companies</FooterLink>
 						<FooterLink href="/#partner">Partner With Us</FooterLink>
-						<FooterLink href="/careers">Careers</FooterLink>
-						<FooterLink href="/contact">Contact</FooterLink>
+						{/* <FooterLink href="/contact">Contact</FooterLink> */}
 					</nav>
 				</div>
 

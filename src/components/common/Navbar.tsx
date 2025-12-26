@@ -51,7 +51,7 @@ export default function Navbar() {
 					<NavLink href="/#about">About</NavLink>
 					<NavLink href="/#companies">Our Companies</NavLink>
 					<NavLink href="/#partner">Partner With Us</NavLink>
-					<NavLink href="/contact">Contact</NavLink>
+					{/* <NavLink href="#contact">Contact</NavLink> */}
 				</div>
 
 				{/* DESKTOP CTA */}
