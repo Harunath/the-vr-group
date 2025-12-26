@@ -11,7 +11,7 @@ function page() {
 			<About />
 			<VRTechForzCard />
 			<Partners />
-			{/* <Contact /> */}
+			<Contact />
 		</>
 	);
 }

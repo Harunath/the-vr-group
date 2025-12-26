@@ -62,7 +62,7 @@ export default function HeroBanner() {
 			},
 			{
 				key: "vragri",
-				name: "VR Agri",
+				name: "VR Agri Farms",
 				href: "https://www.vragrifarms.com/",
 				desc: "Agri services & support",
 				icon: Sprout,

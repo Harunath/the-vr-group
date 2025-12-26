@@ -7,7 +7,7 @@ function Contact() {
 	return (
 		<section
 			id="contact"
-			className="relative mt-20 overflow-hidden bg-white py-14 sm:py-16">
+			className="relative overflow-hidden bg-white py-14 sm:py-16">
 			{/* soft background */}
 			<div aria-hidden className="pointer-events-none absolute inset-0">
 				<div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ecfdf3_0,transparent_55%),radial-gradient(circle_at_top_right,#e0f2fe_0,transparent_55%)]" />
@@ -16,6 +16,7 @@ function Contact() {
 
 			<div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 				<div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur sm:p-10">
+					{/* heading */}
 					<div className="mx-auto max-w-2xl text-center">
 						<p className="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-emerald-700">
 							Contact
@@ -33,57 +34,38 @@ function Contact() {
 					</div>
 
 					{/* actions */}
-					<div className="mt-8 grid gap-3 sm:grid-cols-2">
-						<a
-							href="mailto:info@yourdomain.com"
-							className="
-								group flex items-center justify-between gap-4 rounded-2xl
-								bg-emerald-600 px-5 py-4 text-white
-								shadow-[0_14px_30px_rgba(5,150,105,0.22)]
-								transition hover:bg-emerald-700
-								focus-visible:outline-none focus-visible:ring-2
-								focus-visible:ring-emerald-600 focus-visible:ring-offset-2
-							">
-							<div className="flex items-center gap-3">
-								<span className="grid h-10 w-10 place-items-center rounded-xl bg-white/15">
-									<Mail className="h-5 w-5" />
-								</span>
-								<div className="text-left">
-									<p className="text-[0.95rem] font-semibold">Email us</p>
-									<p className="text-[0.8rem] text-white/85">
-										info@yourdomain.com
-									</p>
+					<div className="mt-8 grid place-items-center">
+						<div className="grid gap-3 sm:grid-cols-2 max-w-xl w-full">
+							<a
+								href="mailto:contact@the-vrgroup.com"
+								className="
+									sm:col-span-2
+									group flex items-center justify-between gap-4 rounded-2xl
+									bg-emerald-600 px-5 py-4 text-white
+									shadow-[0_14px_30px_rgba(5,150,105,0.22)]
+									transition hover:bg-emerald-700
+									hover:-translate-y-0.5
+									hover:shadow-[0_20px_40px_rgba(5,150,105,0.28)]
+									focus-visible:outline-none focus-visible:ring-2
+									focus-visible:ring-emerald-600 focus-visible:ring-offset-2
+								">
+								<div className="flex items-center gap-3">
+									<span className="grid h-10 w-10 place-items-center rounded-xl bg-white/15">
+										<Mail className="h-5 w-5" />
+									</span>
+									<div className="text-left">
+										<p className="text-[0.95rem] font-semibold">Email us</p>
+										<p className="text-[0.8rem] text-white/85">
+											contact@the-vrgroup.com
+										</p>
+									</div>
 								</div>
-							</div>
-							<ArrowRight className="h-5 w-5 opacity-90 transition group-hover:translate-x-0.5" />
-						</a>
-
-						<a
-							href="tel:+919999999999"
-							className="
-								group flex items-center justify-between gap-4 rounded-2xl
-								border border-emerald-200 bg-white px-5 py-4 text-slate-900
-								shadow-[0_10px_22px_rgba(15,23,42,0.05)]
-								transition hover:border-emerald-300 hover:shadow-[0_16px_34px_rgba(5,150,105,0.12)]
-								focus-visible:outline-none focus-visible:ring-2
-								focus-visible:ring-emerald-600 focus-visible:ring-offset-2
-							">
-							<div className="flex items-center gap-3">
-								<span className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-slate-50 text-emerald-700">
-									<Phone className="h-5 w-5" />
-								</span>
-								<div className="text-left">
-									<p className="text-[0.95rem] font-semibold">Call us</p>
-									<p className="text-[0.8rem] text-slate-600">
-										+91 99999 99999
-									</p>
-								</div>
-							</div>
-							<ArrowRight className="h-5 w-5 text-emerald-700 transition group-hover:translate-x-0.5" />
-						</a>
+								<ArrowRight className="h-5 w-5 opacity-90 transition group-hover:translate-x-0.5" />
+							</a>
+						</div>
 					</div>
 
-					{/* subtle footer row */}
+					{/* footer badges */}
 					<div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-[0.82rem] text-slate-600">
 						<span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 shadow-sm">
 							<MapPin className="h-4 w-4 text-emerald-700" />

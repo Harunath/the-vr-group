@@ -49,9 +49,8 @@ export default function Navbar() {
 				{/* DESKTOP NAV LINKS */}
 				<div className="hidden items-center gap-8 md:flex">
 					<NavLink href="/#about">About</NavLink>
-					<NavLink href="/#companies">Our Companies</NavLink>
 					<NavLink href="/#partner">Partner With Us</NavLink>
-					{/* <NavLink href="#contact">Contact</NavLink> */}
+					<NavLink href="#contact">Contact</NavLink>
 				</div>
 
 				{/* DESKTOP CTA */}
@@ -89,9 +88,7 @@ export default function Navbar() {
 						<MobileLink href="/#about" onClick={() => setOpen(false)}>
 							About
 						</MobileLink>
-						<MobileLink href="/#companies" onClick={() => setOpen(false)}>
-							Our Companies
-						</MobileLink>
+
 						<MobileLink href="/#partner" onClick={() => setOpen(false)}>
 							Partner With Us
 						</MobileLink>

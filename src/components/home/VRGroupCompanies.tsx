@@ -76,7 +76,7 @@ const COMPANIES: Company[] = [
 	},
 	{
 		slug: "vr-agri",
-		name: "VR Agri",
+		name: "VR Agri Farms",
 		tag: "Agriculture Services & Solutions",
 		oneLiner: "Smart agriculture solutions from soil to shelf.",
 		description: [
@@ -85,7 +85,7 @@ const COMPANIES: Company[] = [
 		],
 		cta: "Discover VR Agri",
 		href: "https://www.vragrifarms.com/",
-		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1765006087/VR_FARMS_1_hp4nlo.png",
+		logo: "https://res.cloudinary.com/dwsm6i6z9/image/upload/v1766732956/agri_farms_4x_no_bg_eeopbi.png",
 		accent: "#15803d", // deep agri green
 	},
 ];
