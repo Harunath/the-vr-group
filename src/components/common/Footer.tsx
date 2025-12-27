@@ -32,7 +32,7 @@ export default function Footer() {
 								text-[0.65rem] font-semibold uppercase tracking-[0.18em]
 								text-emerald-700
 							">
-								Group of Companies
+								Integrated brands. Real impact.
 							</span>
 						</div>
 					</Link>
@@ -41,7 +41,7 @@ export default function Footer() {
 						<FooterLink href="/#about">About</FooterLink>
 						<FooterLink href="/#companies">Our Companies</FooterLink>
 						<FooterLink href="/#partner">Partner With Us</FooterLink>
-						{/* <FooterLink href="/contact">Contact</FooterLink> */}
+						<FooterLink href="#contact">Contact</FooterLink>
 					</nav>
 				</div>
 
