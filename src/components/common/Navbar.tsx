@@ -104,19 +104,20 @@ export default function Navbar() {
 			{/* THIN BRAND BAR */}
 			<div className="h-0.5 w-full bg-linear-to-r from-emerald-500 via-teal-500 to-sky-500" />
 
-			{/* MOBILE OVERLAY + MENU */}
+			{/* MOBILE OVERLAY + FULL HEIGHT DRAWER */}
 			{open && (
 				<div className="md:hidden">
-					{/* overlay */}
-					<button
-						type="button"
-						aria-label="Close menu"
-						onClick={() => setOpen(false)}
-						className="fixed inset-0 z-40 bg-slate-950/30 backdrop-blur-[2px]"
-					/>
-
-					{/* panel */}
-					<div className="fixed inset-x-0 top-[57px] z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
+					{/* drawer */}
+					<div
+						className="
+				fixed inset-x-0 top-[57px] z-60
+				h-[calc(100vh-57px)]
+				bg-white
+				border-t border-slate-200
+				shadow-[0_18px_50px_rgba(15,23,42,0.18)]
+				overflow-y-auto
+			"
+						style={{ backgroundColor: "rgba(255,255,255,0.98)" }}>
 						<div className="mx-auto w-full max-w-7xl px-4 py-5 sm:px-6">
 							<div className="flex flex-col gap-4">
 								<MobileLink href="/#about" onClick={() => setOpen(false)}>
@@ -136,12 +137,12 @@ export default function Navbar() {
 										href="/#companies"
 										onClick={() => setOpen(false)}
 										className="
-											inline-flex w-full items-center justify-center gap-2
-											rounded-full bg-[--accent]
-											px-5 py-2.5 text-sm font-semibold text-white
-											shadow-sm transition hover:shadow-md hover:brightness-110
-											focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--accent] focus-visible:ring-offset-2
-										"
+								inline-flex w-full items-center justify-center gap-2
+								rounded-full
+								px-5 py-2.5 text-sm font-semibold bg-green-600 text-white
+								shadow-sm transition hover:shadow-md hover:brightness-110
+								focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--accent] focus-visible:ring-offset-2
+							"
 										style={{ ["--accent" as any]: ACCENT }}>
 										Explore Companies <span aria-hidden>↗</span>
 									</Link>

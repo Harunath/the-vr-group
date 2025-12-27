@@ -96,17 +96,18 @@ export default function VRGroupCompanies() {
 			className="relative w-full border-t border-slate-200 bg-white overflow-hidden">
 			{/* subtle background glows */}
 			<div className="absolute inset-0 overflow-hidden">
-				<div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-200/30 blur-3xl" />
-				<div className="absolute -bottom-48 right-0 translate-x-1/2 h-[560px] w-[560px] rounded-full bg-sky-200/30 blur-3xl" />
+				<div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-200/25 blur-3xl" />
+				<div className="absolute -bottom-48 right-0 translate-x-1/2 h-[560px] w-[560px] rounded-full bg-sky-200/25 blur-3xl" />
+				<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(15,23,42,0.05),transparent_55%)]" />
 			</div>
 
-			<div className="relative mx-auto max-w-7xl w-full px-4 py-14 sm:px-6 sm:py-16 lg:py-20">
+			<div className="relative mx-auto max-w-7xl w-full px-4 py-12 sm:px-6 sm:py-14 lg:py-16">
 				{/* header */}
 				<div className="mx-auto max-w-2xl text-center">
 					<p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-emerald-700">
 						Our Companies
 					</p>
-					<h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+					<h2 className="mt-2 text-2xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
 						One vision. Multiple brands. Real impact.
 					</h2>
 					<p className="mt-3 text-sm text-slate-600 sm:text-[0.95rem]">
@@ -117,14 +118,14 @@ export default function VRGroupCompanies() {
 				</div>
 
 				{/* grid */}
-				<div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 					{COMPANIES.map((company) => (
 						<CompanyCard key={company.slug} company={company} />
 					))}
 				</div>
 
 				{/* footer note */}
-				<div className="mt-12 flex justify-center">
+				<div className="mt-10 flex justify-center">
 					<div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-xs text-slate-600 shadow-sm">
 						<span className="h-2 w-2 rounded-full bg-emerald-500" />
 						<span className="font-medium text-slate-800">The VR Group</span>
@@ -144,11 +145,9 @@ function CompanyCard({ company }: { company: Company }) {
 		<article
 			className="
 				group relative overflow-hidden rounded-3xl
-				border border-slate-200/70
-				bg-white/95
+				border border-slate-200/70 bg-white/95
 				shadow-[0_14px_45px_rgba(15,23,42,0.08)]
-				transition
-				hover:-translate-y-1
+				transition hover:-translate-y-1
 				hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)]
 			">
 			{/* accent line */}
@@ -160,42 +159,40 @@ function CompanyCard({ company }: { company: Company }) {
 				style={{ backgroundColor: `${accent}18` }}
 			/>
 
-			<div className="relative flex h-full flex-col p-7 text-center">
-				{/* logo */}
+			<div className="relative flex h-full flex-col p-5 sm:p-6 text-center">
 				<div className="flex justify-center">
-					<div
-						className="grid h-20 w-20 place-items-center rounded-2xl border border-slate-200 bg-white shadow-sm"
-						style={{ boxShadow: `0 14px 34px ${accent}18` }}>
-						<Image
-							src={logo}
-							alt={`${name} logo`}
-							width={78}
-							height={78}
-							className="h-14 w-14 object-contain"
-						/>
-					</div>
+					<Image
+						src={logo}
+						alt={`${name} logo`}
+						width={180}
+						height={180}
+						priority={false}
+						className="h-[90px] w-[90px] sm:h-24 sm:w-24 object-contain
+			drop-shadow-[0_14px_32px_rgba(0,0,0,0.12)]"
+					/>
 				</div>
 
+				{/* tighter spacing */}
 				<p
-					className="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.22em]"
+					className="mt-3 text-[0.66rem] font-semibold uppercase tracking-[0.22em]"
 					style={{ color: `${accent}cc` }}>
 					{tag}
 				</p>
 
-				<h3 className="mt-2 text-lg font-semibold tracking-tight text-slate-900">
+				<h3 className="mt-1 text-lg font-semibold tracking-tight text-slate-900">
 					{name}
 				</h3>
 
-				<p className="mt-3 text-sm font-medium text-slate-700">{oneLiner}</p>
+				<p className="mt-2 text-sm font-medium text-slate-700">{oneLiner}</p>
 
 				<div className="mt-3 space-y-2 text-sm leading-relaxed text-slate-600">
 					{description.map((p) => (
-						<p key={p.slice(0, 20)}>{p}</p>
+						<p key={p.slice(0, 28)}>{p}</p>
 					))}
 				</div>
 
 				{/* CTA */}
-				<div className="mt-6 flex flex-1 items-end justify-center">
+				<div className="mt-5 flex flex-1 items-end justify-center">
 					{href ? (
 						<Link
 							href={href}
